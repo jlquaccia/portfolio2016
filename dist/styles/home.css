@@ -9,11 +9,17 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
     margin: 0;
     font-family: Courier;
+}
+
+section {
+    margin: 20px 0;
 }
 
 /*---------------------------------------------------------*/
@@ -161,6 +167,10 @@ body {
 /*---------------------------------------------------------*/
 /* Work Section */
 /*---------------------------------------------------------*/
+.work_wrapper {
+    padding-right: 0;
+    padding-left: 0;
+}
 
 .section_wrapper {
     margin: 0;
@@ -173,6 +183,7 @@ body {
 h1.section_title {
     padding-left: 20px;
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 .section_title_underline {
@@ -200,6 +211,181 @@ h1.section_title {
 
 .float_right_wrapper {
     padding-right: 20px;
+}
+
+/* clearfix */
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* some resets */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button-cont {
+  display: inline-block;
+  position: relative;
+}
+
+.button-cont .static {
+  display: block;
+  line-height: 43px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: #000;
+  background: #fff;
+  padding: 0 15px;
+  font-weight: 600;
+}
+
+.button-cont .hover-overflow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: .25s;
+  transition: .25s;
+  padding: 0 15px;
+}
+
+.button-cont .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 43px;
+  text-align: center;
+  font-weight: 600;
+  padding: 0 15px;
+}
+
+/* === BASE === */
+html, body {
+  margin: 0;
+}
+
+/* === WORK === */
+#work .content {
+  text-align: center;
+  font-size: 0;
+  margin: 0 auto;
+  max-width: 1550px;
+}
+
+#work h1 {
+  margin: 0;
+}
+
+#work h1 span {
+  width: 19rem;
+  line-height: 10rem;
+  background: #e5e5e5;
+  font-size: 2rem;
+  font-weight: normal;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+#work h1 span:after {
+  content: '';
+  position: absolute;
+  right: 2.4em;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-top: 2.3rem solid #e5e5e5;
+  border-left: 1.9rem solid transparent;
+}
+
+#work img {
+  width: 100%;
+}
+
+#work .work-top .work-top-bigger {
+  display: none;
+}
+
+#work .item {
+  display: block;
+  position: relative;
+  margin: .8rem 0;
+  min-height: 182px;
+  background-color: #f4f7fa;
+  background-size: cover;
+  max-height: 422px;
+  overflow: hidden;
+}
+
+#work .item.hidden {
+  display: none;
+}
+
+#work .item > span {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  margin-top: -2.7rem;
+}
+
+#work .item > span .static {
+  min-width: 250px;
+  line-height: 25px;
+  padding: 15px;
+}
+
+#work .item > span .hover {
+  line-height: 55px;
+}
+
+#work .item:hover .button-cont .hover-overflow {
+  height: 100%;
+}
+
+.black_border {
+    border: 1px solid #000;
+}
+
+/* Responsiveness */
+/* ------------------------------------------------------------------- */
+/* 1299px (you want this one) */
+/* ------------------------------------------------------------------- */
+@media(max-width: 1299px) {
+  #work .col1 .work-bottom {
+    display: none;
+  }
+  
+  #work .col2 .work-top {
+    display: none;
+  }
+  
+  #work .col1 .item.hidden {
+    display: block;
+  }
+  
+  #work .col2 .item {
+    display: none;
+  }
 }
 
 /*---------------------------------------------------------*/
