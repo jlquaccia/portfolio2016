@@ -1,7 +1,7 @@
 (function() {
-    function HomeCtrl($scope) {
+    function HomeCtrl($scope, $rootScope) {
         // Hamburger Icon Animation
-        $scope.toggleMenu = function() {
+        $rootScope.toggleMenu = function() {
             $('#nav-icon3').toggleClass('open');
             $('body').toggleClass('primary-navigation-opened');
             
@@ -15,5 +15,5 @@
     
     angular
         .module('jq2016Revamp')
-        .controller('HomeCtrl', ['$scope', HomeCtrl]);
+        .controller('HomeCtrl', ['$scope', '$rootScope', HomeCtrl]);
 })();
