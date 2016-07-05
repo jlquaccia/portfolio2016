@@ -9,7 +9,6 @@
     
     <!--  Half-Tone Selfie  -->
     <img src="https://s3-us-west-1.amazonaws.com/jq2016-revamp/Selfies/eighteen.jpg" alt="" class="selfie_1 img-responsive">
-<!--    <img src="https://s3-us-west-1.amazonaws.com/jq2016-revamp/Selfies/one.jpg" alt="" class="selfie_1 img-responsive">-->
 </div>
 
 <!--  Projects Section  -->
@@ -28,82 +27,16 @@
 
                     <div class="clear"></div>
 
-                    <div class="col1">
+                    <div class="col1" ng-repeat="project in home.projects">
                       <a ui-sref="projects" class="item">
                         <span>
                           <span class="button-cont">
-                            <span class="static">Bloc Chat</span>
-                            <span class="hover-overflow"><span class="hover">Bloc Chat</span></span>
+                            <span class="static">{{project.title}}</span>
+                            <span class="hover-overflow"><span class="hover">{{project.title}}</span></span>
                           </span>
                         </span>
                         
-                        <img width="1870" height="554" src="/assets/images/projects/bloc_chat.png" alt="Bloc Chat">
-                      </a>
-
-                      <a ui-sref="projects" class="item">
-                        <span>
-                          <span class="button-cont">
-                            <span class="static">Bloc Jams</span>
-                            <span class="hover-overflow"><span class="hover">Bloc Jams</span></span>
-                          </span>
-                        </span>
-
-                        <img width="1870" height="554" src="/assets/images/projects/bloc_jams.png" />
-                      </a>
-
-                      <a ui-sref="projects" class="item">
-                        <span>
-                          <span class="button-cont">
-                            <span class="static">The Music Project</span>
-                            <span class="hover-overflow"><span class="hover">The Music Project</span></span>
-                          </span>
-                        </span>
-
-                        <img width="2598" height="766" src="/assets/images/projects/artist_recommendations.png" />
-                      </a>
-
-                      <a ui-sref="projects" class="item">
-                        <span>
-                          <span class="button-cont">
-                            <span class="static">Markitoff</span>
-                            <span class="hover-overflow"><span class="hover">Markitoff</span></span>
-                          </span>
-                        </span>
-
-                        <img width="1870" height="554" src="/assets/images/projects/markitoff.png" />
-                      </a>
-                      
-                      <a ui-sref="projects" class="item">
-                        <span>
-                          <span class="button-cont">
-                            <span class="static">Simply Put Your Way</span>
-                            <span class="hover-overflow"><span class="hover">Simply Put Your Way</span></span>
-                          </span>
-                        </span>
-
-                        <img width="1870" height="554" src="/assets/images/projects/simply-put-your-way.png" />
-                      </a>
-                      
-                      <a ui-sref="projects" class="item">
-                        <span>
-                          <span class="button-cont">
-                            <span class="static">Festival Quiz</span>
-                            <span class="hover-overflow"><span class="hover">Festival Quiz</span></span>
-                          </span>
-                        </span>
-
-                        <img width="1870" height="554" src="/assets/images/projects/festival-quiz.png" />
-                      </a>
-                      
-                      <a ui-sref="projects" class="item">
-                        <span>
-                          <span class="button-cont">
-                            <span class="static">Wikiland</span>
-                            <span class="hover-overflow"><span class="hover">Wikiland</span></span>
-                          </span>
-                        </span>
-
-                        <img width="1870" height="554" src="/assets/images/projects/wikiland.png" />
+                        <img width="1870" height="554" src="{{project.imageUrl}}" alt="{{project.title}}">
                       </a>
                     </div>
 
