@@ -437,6 +437,7 @@ h1.section_title {
     padding-right: 0;
     padding-left: 0;
     padding-top: 50px;
+    z-index: 9;
 }
 
 .col-md-6.about_text { /* get rid of for mobile */
@@ -454,6 +455,94 @@ h1.section_title {
     background: -webkit-linear-gradient(-45deg, #FFE95C 0%, #FFE95C 100%);
     background: linear-gradient(-45deg, #FFE95C 0%, #FFE95C 100%);
     padding: 10px;
+}
+
+/*---------------------------------------------------------*/
+/* Contact Section */
+/*---------------------------------------------------------*/
+
+.contact_header {
+    background-color: #FFE95C;
+    z-index: 99;
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+    border-radius: 0;
+    background-color: #fff;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+input.form-control.contact_name,
+input.form-control.contact_email {
+    width: 49%;
+}
+
+input.form-control.contact_name {
+    float: left;
+    margin-right: 2%;
+}
+
+input.form-control.contact_phone {
+    width: 49%;
+}
+
+.contact_form_inner_wrapper {
+    position: relative;
+    top: -180px;
+    left: 35px;
+}
+
+.contact_cta_text_wrapper {
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.skewed_bg {
+    background: #333333;
+    padding: 430px 0;
+    -moz-transform: skew(0deg, -10deg);
+    -ms-transform: skew(0deg, -10deg);
+    -webkit-transform: skew(0deg, -10deg);
+    transform: skew(0deg, -10deg);
+    margin-top: -200px;
+    z-index: -1;
+}
+
+.skewed_content {
+    -moz-transform: skew(0deg, 10deg);
+    -ms-transform: skew(0deg, 10deg);
+    -webkit-transform: skew(0deg, 10deg);
+    transform: skew(0deg, 10deg);
+}
+
+.contact_info_wrapper {
+    color: #fff;
+}
+
+.contact_info_inner_wrapper {
+    position: relative;
+    right: 50px;
+    text-align: right;
+    font-size: 150%;
+}
+
+.contact_info_inner_wrapper span {
+    background-color: #FFE95C;
+    color: #333333;
+    padding: 5px;
+}
+
+.social a {
+    color: #000;
+}
+
+section#contact {
+    overflow: hidden;
+    height: 1000px;
 }
 
 /*---------------------------------------------------------*/
