@@ -1,9 +1,12 @@
 (function() {
-    function ProjectsCtrl() {
-        
+    function ProjectsCtrl($rootScope, HamburgerMenu) {
+      // Hamburger Icon Animation
+      $rootScope.toggleMenu = function() {
+          HamburgerMenu.toggleMenu();
+      };
     }
     
     angular
         .module('jq2016Revamp')
-        .controller('ProjectsCtrl', [ProjectsCtrl]);
+        .controller('ProjectsCtrl', ['$rootScope', 'HamburgerMenu', ProjectsCtrl]);
 })();

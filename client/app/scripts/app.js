@@ -12,10 +12,26 @@
                 controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
             })
-            .state('blog', {
-                url: '/blog',
-                controller: 'BlogCtrl as blog',
-                templateUrl: '/templates/blog.html'
+        
+            // Posts Index
+            .state('posts', {
+                url: '/posts',
+                controller: 'PostListCtrl as postList',
+                templateUrl: '/templates/posts/index.html'
+            })
+            
+            // Posts New
+            .state('new', {
+              url: '/posts/new',
+              controller: 'PostAddCtrl as postAdd',
+              templateUrl: '/templates/posts/new.html'
+            })
+        
+            // Posts Edit
+            .state('edit', {
+              url: '/posts/:id/edit',
+              controller: 'PostUpdateCtrl as postUpdate',
+              templateUrl: '/templates/posts/edit.html'
             })
             .state('projects', {
                 url: '/projects',
@@ -25,6 +41,6 @@
     }
     
     angular
-        .module('jq2016Revamp', ['ui.router'])
+        .module('jq2016Revamp', ['ui.router', 'ngResource'])
         .config(config);
 })();

@@ -50,7 +50,7 @@
           <a class="primary-navigation__inner-item" href="#" title="Projects" ng-click="toggleMenu()">Projects</a>
           <a class="primary-navigation__inner-item" href="#" title="About" ng-click="toggleMenu()">About</a>
           <a class="primary-navigation__inner-item" href="#" title="Contact" ng-click="toggleMenu()">Contact</a>
-          <a class="primary-navigation__inner-item" ui-sref="blog" title="Blog" ng-click="toggleMenu()">Blog</a>
+          <a class="primary-navigation__inner-item" ui-sref="posts" title="Blog" ng-click="toggleMenu()">Blog</a>
         </nav>
       </div>
     </div>
@@ -63,13 +63,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
     <!--  Angular UI Router v0.2.18  -->
     <script src="https://cdn.rawgit.com/angular-ui/ui-router/0.2.18/release/angular-ui-router.js"></script>
+    <!--  ngResource  -->
+    <script src="/scripts/vendors/ngResource.js"></script>
     <!--  jQuery v1.12.4  -->
     <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
     <!--  Custom JS  -->
-    <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/HomeCtrl.js"></script>
-    <script src="/scripts/controllers/BlogCtrl.js"></script>
-    <script src="/scripts/controllers/ProjectsCtrl.js"></script>
-    <script src="/scripts/services/Fixtures.js"></script>
+        <!-- Main App JS -->
+        <script src="/scripts/app.js"></script>
+        <!-- Controllers -->
+        <script src="/scripts/controllers/HomeCtrl.js"></script>
+        <script src="/scripts/controllers/ProjectsCtrl.js"></script>
+        <script src="/scripts/controllers/posts/PostListCtrl.js"></script>
+        <script src="/scripts/controllers/posts/PostAddCtrl.js"></script>
+        <script src="/scripts/controllers/posts/PostUpdateCtrl.js"></script>
+        <!-- Services -->
+        <script src="/scripts/services/Fixtures.js"></script>
+        <script src="/scripts/services/HamburgerMenu.js"></script>
+        <!-- Factories -->
+        <script src="/scripts/factories/Posts.js"></script>
+        <script src="/scripts/factories/Post.js"></script>
 </body>
 </html>

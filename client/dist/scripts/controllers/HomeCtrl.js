@@ -1,15 +1,8 @@
 (function() {
-    function HomeCtrl($scope, $rootScope, Fixtures) {
+    function HomeCtrl($scope, $rootScope, HamburgerMenu, Fixtures) {
         // Hamburger Icon Animation
         $rootScope.toggleMenu = function() {
-            $('#nav-icon3').toggleClass('open');
-            $('body').toggleClass('primary-navigation-opened');
-            
-            if (!$('.primary-navigation__inner').hasClass('fadeIn')) {
-                $('.primary-navigation__inner').addClass('fadeIn');
-            } else {
-                $('.primary-navigation__inner').removeClass('fadeIn');
-            }
+            HamburgerMenu.toggleMenu();
         };
         
         this.projects = Fixtures.getProjects();
@@ -17,5 +10,5 @@
     
     angular
         .module('jq2016Revamp')
-        .controller('HomeCtrl', ['$scope', '$rootScope', 'Fixtures', HomeCtrl]);
+        .controller('HomeCtrl', ['$scope', '$rootScope', 'HamburgerMenu', 'Fixtures', HomeCtrl]);
 })();
