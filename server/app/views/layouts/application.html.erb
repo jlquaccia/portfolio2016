@@ -1,13 +1,62 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Server</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
+<html ng-app="jq2016Revamp">
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>jq2016 Revamp</title>
+    <!--  Google Fonts  -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,300,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+    <!--  Normalize v4.1.1  -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/4.1.1/normalize.css">
+    <!--  Ionicon v2.0.1  -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!--  Bootstrap v3.3.6  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--  Animate CSS  -->
+    <link rel="stylesheet" href="https://s.mlcdn.co/animate.css">
+    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="body-wrapper">
+    <!--  Header  -->
+    <div class="header">
+        <!--  Navigation  -->
+        <div class="nav" id="nav">
+    <!--
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">work</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+    -->
+            <!--  Hamburger Menu Icon  -->
+            <div id="nav-icon3" ng-click="toggleMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+        </div>
+    </div>
+    
+    <!--  Hidden Side Nav Menu  -->
+    <div class="primary-navigation">
+      <div class="primary-navigation__outer">
+        <nav class="primary-navigation__inner animated">
+          <a class="primary-navigation__inner-item primary-navigation__inner-item--current" ui-sref="home" title="Home" ng-click="toggleMenu()">Home</a>
+          <a class="primary-navigation__inner-item" href="#" title="Projects" ng-click="toggleMenu()">Projects</a>
+          <a class="primary-navigation__inner-item" href="#" title="About" ng-click="toggleMenu()">About</a>
+          <a class="primary-navigation__inner-item" href="#" title="Contact" ng-click="toggleMenu()">Contact</a>
+          <a class="primary-navigation__inner-item" ui-sref="blog" title="Blog" ng-click="toggleMenu()">Blog</a>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="container-fluid main_wrapper">
+        <ui-view></ui-view>
+    </div>
 </body>
 </html>
