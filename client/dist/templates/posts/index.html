@@ -15,7 +15,7 @@
                 <td>{{post.title}}</td>
                 <td>{{post.body}}</td>
                 <td>
-                    <a ui-sref="edit">Edit</a> | <a href="" ng-click="deletePost(post.id)">Remove</a>
+                    <a ui-sref="show({id: post.id})">Show</a> | <a ui-sref="edit({id: post.id})">Edit</a> | <a ng-click="deletePost(post.id)">Remove</a>
                 </td>
             </tr>
         </table>

@@ -33,6 +33,12 @@
               controller: 'PostUpdateCtrl as postUpdate',
               templateUrl: '/templates/posts/edit.html'
             })
+            // Posts Show
+            .state('show', {
+              url: '/posts/:id',
+              controller: 'PostShowCtrl as postShow',
+              templateUrl: '/templates/posts/show.html'
+            })
             .state('projects', {
                 url: '/projects',
                 controller: 'ProjectsCtrl as projects',
