@@ -1,6 +1,11 @@
 class InquiriesController < ApplicationController
   def create
     @inquiry = Inquiry.create(inquiry_params)
+    
+    if @inquiry.valid?
+      InquiryMailer.new_inquiry(@inquiry).deliver_now
+    end
+
     render :nothing => true
   end
 
