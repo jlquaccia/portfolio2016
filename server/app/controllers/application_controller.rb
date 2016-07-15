@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  # protect_from_forgery
   before_filter :add_allow_credentials_headers
 
   def add_allow_credentials_headers
