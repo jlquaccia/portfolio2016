@@ -1,18 +1,13 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  
   protect_from_forgery
+  before_filter :add_allow_credentials_headers
 
-  after_filter :set_csrf_cookie_for_ng
-
-  def set_csrf_cookie_for_ng
-    cookies['XSRF-TOKEN'] = form_authenticity_token if protect_against_forgery?
+  def add_allow_credentials_headers
+    response.headers['Access-Control-Allow-Origin'] = request.headers['Origin'] || '*'
+    response.headers["Access-Control-Allow-Methods"] = "GET, PUT, POST, DELETE"
   end
 
-  protected
-
-  def verified_request
-    super || valid_authenticity_token?(session, request.headers['X-XSRF-TOKEN'])
+  def options
+    head :status => 200, :'Access-Control-Allow-Headers' => 'accept, content-type'
   end
 end

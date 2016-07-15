@@ -22,6 +22,10 @@ class PostsController < ApplicationController
   def show
     respond_with(@post.as_json)
   end
+
+  def edit
+    respond_with(@post.as_json)
+  end
   
   def update
     if @post.update_attributes(post_params)

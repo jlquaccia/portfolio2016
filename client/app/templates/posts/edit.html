@@ -2,8 +2,25 @@
   <div class="row">
     <div class="col-md-8">
       <form class="tab-pane active form-horizontal" id="first" name="postForm" novalidate ng-submit="update()">
-          <h3 class="block">Edit post</h3>
-          <div ng-include src="'/templates/posts/_form.html'"></div>
+        <h3 class="block">Edit Post</h3>
+        <div class="col-md-8">
+          <div class="form-group" ng-class="{'has-error' : submitted && postForm.title.$invalid}">
+              <label>Title <span class="required">* </span> </label>
+              <input type="text" name="title" class="form-control" ng-model="post.title" required placeholder="title"/>
+              <p ng-show=" submitted && postForm.title.$invalid" class="help-block">Post title is required.</p>
+          </div>
+
+          <div class="form-group" ng-class="{'has-error' : submitted && postForm.body.$invalid}">
+              <label>Body <span class="required">* </span> </label>
+              <textarea name="body" class="form-control" ng-model="post.body" required placeholder="Enter post" cols="30" rows="10"></textarea>
+              <p ng-show=" submitted && postForm.body.$invalid" class="help-block">Post is required.</p>
+          </div>
+
+          <div class="form-group">
+              <a class="btn btn-default" ui-sref="posts"> Back</a>
+              <button type="submit" class="btn btn-primary" ng-click="submitted=true">Submit</button>
+          </div>
+        </div>
       </form>
     </div>
   </div>

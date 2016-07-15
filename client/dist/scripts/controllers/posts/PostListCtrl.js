@@ -4,7 +4,7 @@
     
     $scope.deletePost = function(postId) {
       if (confirm('Are you sure you want to delete this post?')) {
-        Post.delete({ id: postId }, function() {
+        Post.delete({id: postId}, function() {
           $scope.posts = Posts.query();
           $state.go('posts');
         });
