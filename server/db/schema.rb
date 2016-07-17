@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160715183747) do
+ActiveRecord::Schema.define(version: 20160717184211) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -32,8 +32,9 @@ ActiveRecord::Schema.define(version: 20160715183747) do
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "description"
   end
 
 end

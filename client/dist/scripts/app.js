@@ -47,6 +47,6 @@
     }
     
     angular
-        .module('jq2016Revamp', ['ui.router', 'ngResource'])
+        .module('jq2016Revamp', ['ui.router', 'ngResource', 'ngtimeago'])
         .config(config);
 })();
