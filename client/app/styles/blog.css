@@ -259,6 +259,43 @@ section#blog_posts {
 }
 
 /* ==================================================================== */
+/* Parallax Header */
+/* ==================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.blog_main {
+  height: 150vh;
+  max-height: 100%;
+  overflow-x: hidden;
+  perspective: 1px;
+  perspective-origin: center top;
+  transform-style: preserve-3d;
+}
+
+.blog_header {
+  position: relative;
+  vertical-align: top;
+  transform-origin: center top;
+  transform: translateZ(-1px) scale(2);
+}
+
+.blog_section {
+  min-height: 200vh;
+  background: white;
+  transform: translateZ(0);
+  padding: 10px 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* ==================================================================== */
 /* Responsiveness */
 /* ==================================================================== */
 
